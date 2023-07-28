@@ -4,7 +4,7 @@ idleAnimationNumber=0;
 
     function  idleAnimation(){
 
-        idleImageNumber == idleImageNumber+1
+        idleImageNumber = idleImageNumber+1;
 
         if(idleImageNumber==11){
             idleImageNumber =1;
@@ -14,7 +14,7 @@ idleAnimationNumber=0;
 }
 
 function idleAnimationStart(){
-    idleAnimationNumber = setInterval(idleAnimation,1000);
+    idleAnimationNumber = setInterval(idleAnimation,200);
 }
 
 
