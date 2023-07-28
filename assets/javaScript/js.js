@@ -1,3 +1,6 @@
+
+//character idle animation
+
 var boy =  document.getElementById("boy");
 idleImageNumber =0;
 idleAnimationNumber=0;
@@ -17,6 +20,12 @@ function idleAnimationStart(){
     idleAnimationNumber = setInterval(idleAnimation,200);
 }
 
+//character run animation
+
+    function runAnimation(){
+
+        boy.src =
+    }
 
 
 
