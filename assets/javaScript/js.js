@@ -101,6 +101,10 @@ function jumpAnimationStart(){
              runAnimationStart();
          }
 
+         if(boxAnimationId==0){   // Start barriers animation
+             boxAnimationId = setInterval(boxAnimation,100);
+         }
+
      }
 
 //when press space boy start to jump ------------------------------------
@@ -109,8 +113,12 @@ function jumpAnimationStart(){
          if(jumpAnimationNumber==0){
              jumpAnimationStart();
          }
-         if (moveBackgroundAnimationId==0){
+         if (moveBackgroundAnimationId==0){    // Start background animation
              moveBackgroundAnimationId = setInterval(moveBackground,100);
+         }
+
+         if(boxAnimationId==0){   // Start barriers animation
+             boxAnimationId = setInterval(boxAnimation,100);
          }
      }
 
@@ -143,6 +151,7 @@ boxMarginLeft  = 1600;
             box.className = "box";
             document.getElementById("background").append(box);
             box.style.marginLeft = boxMarginLeft + "px";
+            box.id = "box"+i;
 
 
 
@@ -160,6 +169,17 @@ boxMarginLeft  = 1600;
 
         }
 
+    }
 
+    var boxAnimationId = 0;
 
+    function boxAnimation(){  // barriers come to left
+
+        for (var i =0; i<10; i++){
+            var box = document.getElementById("box" + i);
+            var  currentMarginLeft = getComputedStyle(box).marginLeft;
+            var newMarginLeft = parseInt(currentMarginLeft) - 25;
+            box.style.marginLeft = newMarginLeft + "px";
+
+        }
     }
