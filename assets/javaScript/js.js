@@ -131,6 +131,22 @@ var backgraoundImagePositionX=0;
     }
 
 
+// generate  barriers ----------------------------------------------------------------
+
+boxMarginLeft  = 500;
+
+    function createBoxes(){
+
+        for(var i=0; i<10; i++){
+
+            var box =  document.createElement("div");
+            box.className = "box";
+            document.getElementById("background").append(box);
+            box.style.marginLeft = boxMarginLeft + "px";
+
+            boxMarginLeft = boxMarginLeft + 1000;
+        }
 
 
 
+    }
