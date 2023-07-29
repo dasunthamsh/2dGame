@@ -46,10 +46,33 @@ var runAniamtionNumber =0;
 // character jump animation --------------------------------------------
 
 jumpAnimationNumber = 0;
+jumpImageNumber = 0;
+ boyMarginTop=450;
 
 function jumpAnimation(){
 
-    boy.src = "assets/img/png/Run("+  +").png";
+    jumpImageNumber = jumpImageNumber +1;
+
+
+    if(jumpImageNumber<=6){
+        boyMarginTop = boyMarginTop-20;
+        boy.style.marginTop = boyMarginTop+"px";
+    }
+
+    if(jumpImageNumber >=7){
+        boyMarginTop = boyMarginTop +20;
+        boy.style.marginTop = boyMarginTop + "px";
+    }
+
+    if(jumpImageNumber==11){
+        jumpImageNumber=1;
+        clearInterval(jumpAnimationNumber);
+        jumpAnimationNumber=0;
+        runImageNumber = 0;
+        runAnimationStart();
+    }
+
+    boy.src = "assets/img/png/Jump("+ jumpImageNumber +").png";
 }
 
 function jumpAnimationStart(){
@@ -60,12 +83,14 @@ function jumpAnimationStart(){
 }
 
 
-//when press start boy start to running ------------------------------------
 
  function keyCheck(event){
-    //  alert(event.keyCode);
+      // alert(event.keyCode);
     // console.log(event);
      var keyCode = event.keyCode;
+
+
+     //when press enter boy start to running ------------------------------------
 
      if(keyCode==13){
 
@@ -78,6 +103,16 @@ function jumpAnimationStart(){
 
      }
 
+//when press space boy start to jump ------------------------------------
+
+     if(keyCode==32){
+         if(jumpAnimationNumber==0){
+             jumpAnimationStart();
+         }
+         if (moveBackgroundAnimationId==0){
+             moveBackgroundAnimationId = setInterval(moveBackground,100);
+         }
+     }
 
  }
 
