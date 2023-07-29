@@ -133,7 +133,7 @@ var backgraoundImagePositionX=0;
 
 // generate  barriers ----------------------------------------------------------------
 
-boxMarginLeft  = 500;
+boxMarginLeft  = 1600;
 
     function createBoxes(){
 
@@ -144,7 +144,20 @@ boxMarginLeft  = 500;
             document.getElementById("background").append(box);
             box.style.marginLeft = boxMarginLeft + "px";
 
-            boxMarginLeft = boxMarginLeft + 1000;
+
+
+            if(i<5){    //  level one --
+
+                boxMarginLeft = boxMarginLeft + 1000;
+
+            }
+            if(i=>5){    //  level tow --
+
+                boxMarginLeft = boxMarginLeft + 800;
+
+
+            }
+
         }
 
 
