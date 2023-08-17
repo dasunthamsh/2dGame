@@ -14,6 +14,8 @@ idleAnimationNumber=0;
     }
 
     boy.src = "assets/img/png/idle("+idleImageNumber+").png";
+        // src = this is use to specify source in a displaying image without html element
+
 }
 
 function idleAnimationStart(){
@@ -181,5 +183,22 @@ boxMarginLeft  = 1600;
             var newMarginLeft = parseInt(currentMarginLeft) - 25;
             box.style.marginLeft = newMarginLeft + "px";
 
+
+            if(newMarginLeft >=-110 & newMarginLeft <= 100){
+                if(boyMarginTop > 300){
+                    clearInterval(boxAnimationId);
+
+                    clearInterval(runAniamtionNumber);
+                    runAniamtionNumber = -1;
+
+                    clearInterval(moveBackgroundAnimationId);
+                    moveBackgroundAnimationId = -1;
+
+                    clearInterval(jumpAnimationNumber);
+                    moveBackgroundAnimationId =-1;
+                }
+            }
         }
     }
+
+
