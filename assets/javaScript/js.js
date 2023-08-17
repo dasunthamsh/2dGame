@@ -19,7 +19,7 @@ idleAnimationNumber=0;
 }
 
 function idleAnimationStart(){
-    idleAnimationNumber = setInterval(idleAnimation,200);
+    idleAnimationNumber = setInterval(idleAnimation,100);
 }
 
 
@@ -81,7 +81,7 @@ function jumpAnimationStart(){
         clearInterval(idleAnimationNumber);
         runImageNumber=0;
         clearInterval(runAniamtionNumber);
-        jumpAnimationNumber = setInterval(jumpAnimation,100);
+        jumpAnimationNumber = setInterval(jumpAnimation,50);
 }
 
 
@@ -196,9 +196,22 @@ boxMarginLeft  = 1600;
 
                     clearInterval(jumpAnimationNumber);
                     moveBackgroundAnimationId =-1;
+
+                   boyDeadAnimationNumber  = setInterval(boyDeadAnimation,100);
                 }
             }
         }
     }
 
+    deadImageNumber = 1;
+boyDeadAnimationNumber = 0;
+function boyDeadAnimation(){
 
+    deadImageNumber = deadImageNumber+1;
+
+    if(deadImageNumber == 11){
+        deadImageNumber =10;
+    }
+
+        boy.src = "assets/img/png/Dead("+ deadImageNumber +").png"
+}
