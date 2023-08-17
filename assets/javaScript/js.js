@@ -215,7 +215,15 @@ function boyDeadAnimation(){
 
     if(deadImageNumber == 11){
         deadImageNumber =10;
+
+        document.getElementById("end").style.visibility="visible";
+        document.getElementById("endScore").innerHTML=score;
     }
 
         boy.src = "assets/img/png/Dead("+ deadImageNumber +").png"
+}
+
+
+function reload(){
+    location.reload()
 }
