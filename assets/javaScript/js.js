@@ -132,12 +132,16 @@ function jumpAnimationStart(){
 var backgraoundImagePositionX=0;
     moveBackgroundAnimationId=0;
 
+    var score = 0;
+
     function moveBackground(){
 
         backgraoundImagePositionX = backgraoundImagePositionX -20;
 
         document.getElementById("background").style.backgroundPositionX = backgraoundImagePositionX + "px";
 
+        score = score+1;
+        document.getElementById("sore").innerHTML=score;
     }
 
 

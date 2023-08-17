@@ -27,3 +27,12 @@ body{
 
 }
 
+.score{
+    font-size: 50px;
+    position: absolute;
+    font-weight:bold;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+
