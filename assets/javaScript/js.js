@@ -57,12 +57,12 @@ function jumpAnimation(){
 
 
     if(jumpImageNumber<=6){
-        boyMarginTop = boyMarginTop-20;
+        boyMarginTop = boyMarginTop-50;
         boy.style.marginTop = boyMarginTop+"px";
     }
 
     if(jumpImageNumber >=7){
-        boyMarginTop = boyMarginTop +20;
+        boyMarginTop = boyMarginTop +50;
         boy.style.marginTop = boyMarginTop + "px";
     }
 
@@ -81,7 +81,7 @@ function jumpAnimationStart(){
         clearInterval(idleAnimationNumber);
         runImageNumber=0;
         clearInterval(runAniamtionNumber);
-        jumpAnimationNumber = setInterval(jumpAnimation,50);
+        jumpAnimationNumber = setInterval(jumpAnimation,200);
 }
 
 
