@@ -151,7 +151,7 @@ boxMarginLeft  = 1600;
 
     function createBoxes(){
 
-        for(var i=0; i<10; i++){
+        for(var i=0; i<100; i++){
 
             var box =  document.createElement("div");
             box.className = "box";
@@ -164,11 +164,14 @@ boxMarginLeft  = 1600;
             if(i<5){    //  level one --
 
                 boxMarginLeft = boxMarginLeft + 1000;
+                // document.getElementById("one").innerText("2");
 
             }
             if(i=>5){    //  level tow --
 
                 boxMarginLeft = boxMarginLeft + 800;
+                // document.getElementById("one").textContent("3");
+
 
 
             }
